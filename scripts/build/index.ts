@@ -5,6 +5,7 @@ import { parseArgs } from "util";
 import { buildPython } from "./languages/python.ts";
 import { buildSwift } from "./languages/swift.ts";
 import { buildTypescript } from "./languages/typescript.ts";
+import { buildKotlin } from "./languages/kotlin.ts";
 
 export const REPO_ROOT = path.resolve(__dirname, "../../");
 process.chdir(REPO_ROOT);
@@ -59,6 +60,7 @@ const languages = {
   python: buildPython,
   swift: buildSwift,
   typescript: buildTypescript,
+  kotlin: buildKotlin,
 };
 
 const crates = ["algokit_transact"];
