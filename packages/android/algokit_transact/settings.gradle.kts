@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "algokit_transact"
 include(":app")
+include(":transact")
+ 
