@@ -30,6 +30,12 @@ The exported interfaces should be purely functional without any state owned by R
 
 ## Contributing
 
+## Build Scripts
+
+`bun scripts/build` will run the build script. For example: `bun scripts/build algokit_transact kotlin` builds `algokit_transact` for `kotlin`.
+
+The scripts are defined in [./scripts/build/languages/] for each language.
+
 ### Learning Resources
 
 If you are new to Rust or UniFFI, check out the [learning resources document](./docs/contributing/learning_resources.md)
