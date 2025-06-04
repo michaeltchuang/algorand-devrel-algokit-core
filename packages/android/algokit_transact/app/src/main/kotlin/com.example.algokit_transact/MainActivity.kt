@@ -12,7 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.transact.Utility
+import com.example.transact.TransactApi
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +24,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting(Utility().getName())
+                    val address = TransactApi()
+                        .createAddressFromString("YVRRLLVBX54N44WG4EZJWPXXA6RROAU5TLHB4XHCMZFVZBVCB6KSDWDSEQ")
+                    Greeting(address.address)
                 }
             }
         }
